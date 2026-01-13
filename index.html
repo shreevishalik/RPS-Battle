@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The RPS Battle | Online Game</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/rps-favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Joti+One&family=Jolly+Lodger&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!--start of all the sections-->
+  <!--intro section-->
+  <section id="intro" class="screen active">
+    <button class="intro-btn" onclick="goToInstructions()">
+      Go to Instructions
+    </button>
+  </section>
+
+  <!--instructions section-->
+  <section id="instructions" class="screen">
+    <h1>How to Play!</h1>
+
+    <div class="content">
+      <p>1. Choose Rock, Paper, or Scissors.</p>
+      <p>2. The computer will choose automatically.</p>
+      <p>3. Win 2 out of 3 rounds to become the winner.</p>
+    </div>
+
+    <button class="start-btn" onclick="startGame()">Start Game</button>
+  </section>
+
+  <!--the game (you vs computer) section-->
+  <section id="game" class="screen">
+    <div class="vs-container" id="vs-container" style="display: none;">
+      <div class="player user">
+        <h2>You</h2>
+        <img id="user-img" alt="Your choice">
+      </div>
+
+      <div class="player computer">
+        <h2>Computer</h2>
+        <img id="computer-img" alt="Computer choice">
+      </div>
+    </div>
+
+    <div class="choices">
+      <button class="start-btn" onclick="playRound('rock')">Rock</button>
+      <button class="start-btn" onclick="playRound('paper')">Paper</button>
+      <button class="start-btn" onclick="playRound('scissors')">Scissors</button>
+    </div>
+  </section>
+
+  <!--the final result section-->
+  <section id="result" class="screen">
+    <div class="content">
+      <h1>Game Results</h1>
+      <div id="round-results"></div>
+      <h2 id="final-winner"></h2>
+      <button class="start-btn" onclick="restartGame()">Play Again</button>
+    </div>
+  </section>
+  <!--completion of all the sections-->
+
+  <script src="script.js"></script>
+</body>
+</html>

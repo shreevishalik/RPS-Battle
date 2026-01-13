@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.screen {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.screen.active {
+    display: block;
+    z-index: 100;
+}
+
+#intro {
+    background-color: #436098; 
+    background-image: url("assets/intro-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.intro-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+    border: 5px solid white;
+    border-radius: 30px;
+
+    background: #436098;
+    color: #1e2847;
+    cursor: pointer;
+
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.intro-btn:hover {
+    transform: translateX(-50%) translateY(-3px);
+    background: #8dcaf6;
+}
+
+#instructions {
+    background: #436098;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#instructions h1 {
+    font-family: 'Joti One', cursive;
+    font-size: 70px;
+    color: #1e2847;
+    margin-top: 40px;
+}
+
+#instructions .content {
+    margin: auto;
+    background: rgba(0,0,0,0.25);
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    color: white;
+}
+
+#instructions .content p {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.start-btn {
+    margin-bottom: 50px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+    border: 5px solid white;
+    border-radius: 30px;
+
+    background: #436098;
+    color: white;
+    cursor: pointer;
+
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+    transform: translateY(-3px);
+    background: #8dcaf6;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;
+    background-color: #436098;
+    text-align: center;
+}
+
+#game.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.vs-container {
+    display: flex;
+    justify-content: center; 
+    gap: 100px;             
+    margin-bottom: 30px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width: 150px;
+}
+
+.player h2 {
+    font-family: 'Jolly Lodger', cursive; 
+    font-size: 36px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.player img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.choices {
+    text-align: center;
+}
+
+.choices button {
+    margin: 5px;
+    padding: 10px 15px;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;
+    background: #436098;
+    color: white;
+    text-align: center;
+}
+
+#result .content {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    color: white;
+}
+
+#result h1 {
+    font-family: 'Joti One', cursive;
+    font-size: 60px;
+    color: white;
+    margin-top: 40px;
+}
+
+#result #round-results p {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+#result #final-winner {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#final-winner {
+    font-family: 'Jolly Lodger', cursive; 
+    font-size: 60px;                    
+    font-weight: bold;
+    margin: 30px 0;
+    color: #1e2847;                     
+    text-shadow: 2px 2px 2px #2c2a2a;   
+    text-align: center;
+    animation: pulse 1.2s infinite alternate; 
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        color: #1e2847;
+    }
+    to {
+        transform: scale(1.1);
+        color: #1e2847;
+    }
+}
+
+
