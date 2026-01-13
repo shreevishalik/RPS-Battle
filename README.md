@@ -6,7 +6,7 @@ Play against the computer in a **best of three rounds** and see who wins!
 ---
 
 ## 🚀 Live Demo
-🔗 **Play here:** https://rps-battle-online-game.netlify.app/  
+**[Click here to play](https://rps-battle-online-game.netlify.app/)** 
 
 ---
 
